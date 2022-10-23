@@ -1,5 +1,11 @@
 ---
-- hosts: "{{ hosts_override | default('proxmox_compute') }}"
+- hosts: "{{ hosts1_override | default('nas') }}"
+  gather_facts: no
+  collections:
+    - kharyam.lab_setup
+  roles:
+    - role: poweron
+- hosts: "{{ hosts2_override | default('proxmox_compute') }}"
   gather_facts: no
   collections:
     - kharyam.lab_setup

@@ -1,8 +1,11 @@
 ---
+all:
+  vars:
+    ansible_become: true
+
 proxmox_compute:
   vars:
     ui_port: 8006
-    ansible_become: true
   hosts:
     lab1:
       ansible_host: 192.168.30.21
@@ -22,17 +25,22 @@ pi:
     pi1:
       ansible_host: 192.168.30.3
       ui_port: 8000
-      ansible_become: true
+      mac: dc:a6:32:52:49:a5
 
 nas:
   hosts:
     nas1:
       ansible_host: 192.168.30.20
       ui_port: 80
-      ansible_become: true
+      mac: 58:11:22:4d:2d:1f
 
 baremetal:
   children:
     proxmox_compute:
     pi:
-    #nas
+    nas:
+
+lab:
+  children:
+    proxmox_compute:
+    nas: 
