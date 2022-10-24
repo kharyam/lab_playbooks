@@ -1,5 +1,4 @@
 collections:
   - name: kharyam.lab_setup
-    version: 0.0.3
-    source: https://galaxy.ansible.com
-  
+    src: https://github.com/kharyam/proxmox_lab_management
+

@@ -4,9 +4,12 @@
     - kharyam.lab_setup
   roles:
     - role: shutdown
+  ignore_unreachable: true
+
 - hosts: "{{ hosts2_override | default('nas') }}"
   collections:
     - kharyam.lab_setup
   roles:
     - role: shutdown
+  ignore_unreachable: true
 
