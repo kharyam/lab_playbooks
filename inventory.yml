@@ -19,6 +19,7 @@ proxmox_compute:
       ansible_host: 192.168.30.23
       new_ip: 192.168.30.23
       mac: 1C:83:41:31:69:6D
+      ansible_user: root
     
 pi:
   hosts:
