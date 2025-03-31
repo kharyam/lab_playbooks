@@ -10,27 +10,31 @@ proxmox_compute:
     lab1:
       ansible_host: 192.168.30.21
       new_ip: 192.168.30.21
-      mac: 58:47:CA:70:1D:E5
-      ansible_user: root
+      mac: 58:47:CA:7C-45-FD
     lab2:
       ansible_host: 192.168.30.22
       new_ip: 192.168.30.22
-      mac: 1C:83:41:31:66:93
+      mac: 58:47:CA:77:95:29
     lab3:
       ansible_host: 192.168.30.23
       new_ip: 192.168.30.23
       mac: 1C:83:41:31:69:6D
     lab4:
-      ansible_host: 192.168.30.24
       ansible_user: root
+      ansible_host: 192.168.30.24
       new_ip: 192.168.30.24
       mac: 58:47:ca:76:5e:29 
+    lab5:
+      ansible_host: 192.168.30.25
+      ansible_user: root
+      new_ip: 192.168.30.25
+      mac: 58:47:ca:77:95:85 
 pi:
   hosts:
     pi1:
-      ansible_host: 192.168.30.3
+      ansible_host: 192.168.30.6
       ui_port: 8000
-      mac: dc:a6:32:52:49:a5
+      mac: 00:a0:98:75:18:24
 
 nas:
   hosts:
