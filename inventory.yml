@@ -10,7 +10,7 @@ proxmox_compute:
     lab1:
       ansible_host: 192.168.30.21
       new_ip: 192.168.30.21
-      mac: 58:47:CA:7C-45-FD
+      mac: 58:47:CA:7C:45:FD
     lab2:
       ansible_host: 192.168.30.22
       new_ip: 192.168.30.22
